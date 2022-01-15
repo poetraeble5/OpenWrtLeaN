@@ -39,13 +39,13 @@ sed -i '/REDIRECT --to-ports 53/d' /etc/firewall.user
 echo "iptables -t nat -A PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 53" >> /etc/firewall.user
 echo "iptables -t nat -A PREROUTING -p tcp --dport 53 -j REDIRECT --to-ports 53" >> /etc/firewall.user
 
-sed -i '/option disabled/d' /etc/config/wireless
-sed -i '/set wireless.radio${devidx}.disabled/d' /lib/wifi/mac80211.sh
+#sed -i '/option disabled/d' /etc/config/wireless
+#sed -i '/set wireless.radio${devidx}.disabled/d' /lib/wifi/mac80211.sh
 
 sed -i '/DISTRIB_REVISION/d' /etc/openwrt_release
 echo "DISTRIB_REVISION='repacks by poetraeble5'" >> /etc/openwrt_release
 sed -i '/DISTRIB_DESCRIPTION/d' /etc/openwrt_release
-echo "DISTRIB_DESCRIPTION='FastSSH '" >> /etc/openwrt_release
+echo "DISTRIB_DESCRIPTION='www.fastssh.com '" >> /etc/openwrt_release
 
 sed -i '/log-facility/d' /etc/dnsmasq.conf
 echo "log-facility=/dev/null" >> /etc/dnsmasq.conf
